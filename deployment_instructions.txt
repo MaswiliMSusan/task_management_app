@@ -1,0 +1,45 @@
+Task Management App – Deployment Instructions
+
+About The App
+The Task Management Application that is developed to help with Project's task management.
+The Application has 3 types of users namely the Admin, Project Manager, and the Regular Employee. 
+The Project Managers manage the project details and the progress under her/his management. 
+The Regular Employees will submit their work productivity in each task of the project.
+The Application requires the employee to submit their start and end time range of their work on a certain task and this data will be calculated in the report as project members' work duration.
+
+How the Application Works
+The Task Management Application users can only be created by admin users. The admin user or the Project Managers will create a new project with details and references of the users. 
+When creating a project, the admin or project managers must list all the employees that will handle the project's tasks. 
+After the creation of the project, the regular employees are limited only to adding their work progress for the task of the project that they are assigned. They are also allowed to edit the data of the progress that they only submitted. 
+The employees will regularly update the tasks about their productivity.
+
+Features:
+Login Page
+Home Page
+Project (CRUD Features)
+Task List Page
+Progress Form
+Report Generation
+User (CRUD Features)
+
+
+The Task Management Application was developed using HTML, PHP/MySQLi, CSS, JavaScript (jQuery/Ajax), and Bootstrap for the design. The source code is fully functional and easy to modify or enhance. 
+Follow the instruction below to have an actual experience using this simple project.
+How to Deploy the Application
+1.	Download the source code and extract the zip file.
+2.	Download or set up any local web server (e.g xammp) that runs PHP script.
+3.	Open the web-server database and create a new database name it "tms_db".
+4.	Import the SQL file located in the database folder of the source code.
+5.	Copy and paste the source code to the location where your local web server accessing your local projects. Example for XAMPP('C:\xampp\htdocs')
+6.	Open a web browser and browse the project. E.g [http://localhost/task_management_App]
+7.	The Admin user has all the privileges to access the data stored in the database through the Application to create, edit and delete records (users, project, tasks).
+
+Admin Credentials
+Email: admin@admin.com
+Password: admin123
+
+Employee Credentials
+Email: susanmaswili@gmail.com
+Password: Susan123
+
+Thank You
