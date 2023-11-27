@@ -27,6 +27,7 @@
 						<th>Project Due Date</th>
 						<th>Project Status</th>
 						<th>Task Status</th>
+						<th>Task Priority</th>
 						<th>Action</th>
 					</tr>
 				</thead>
@@ -99,6 +100,17 @@
 						  		echo "<span class='badge badge-primary'>On-Progress</span>";
                         	}elseif($row['status'] == 3){
 						  		echo "<span class='badge badge-success'>Done</span>";
+                        	}
+                        	?>
+                        </td>
+						<td>
+                        	<?php 
+                        	if($row['priority'] == 8){
+						  		echo "<span class='badge badge-dark'>Low</span>";
+                        	}elseif($row['priority'] == 9){
+						  		echo "<span class='badge badge-info'>Medium</span>";
+                        	}elseif($row['priority'] == 10){
+						  		echo "<span class='badge badge-danger'>High</span>";
                         	}
                         	?>
                         </td>

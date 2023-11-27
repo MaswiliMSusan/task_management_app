@@ -27,6 +27,20 @@ if(isset($_GET['id'])){
 		</dd>
 	</dl>
 	<dl>
+		<dt><b class="border-bottom border-primary">Priority</b></dt>
+		<dd>
+			<?php 
+        	if($priority == 8){
+		  		echo "<span class='badge badge-dark'>Low</span>";
+        	}elseif($priority == 9){
+		  		echo "<span class='badge badge-info'>Medium</span>";
+        	}elseif($priority == 10){
+		  		echo "<span class='badge badge-danger'>High</span>";
+        	}
+        	?>
+		</dd>
+	</dl>
+	<dl>
 		<dt><b class="border-bottom border-primary">Description</b></dt>
 		<dd><?php echo html_entity_decode($description) ?></dd>
 	</dl>

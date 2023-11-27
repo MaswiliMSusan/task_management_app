@@ -137,6 +137,7 @@ $manager = $manager->num_rows > 0 ? $manager->fetch_array() : array();
 							<th>Task</th>
 							<th>Description</th>
 							<th>Status</th>
+							<th>Priority</th>
 							<th>Action</th>
 						</thead>
 						<tbody>
@@ -164,6 +165,18 @@ $manager = $manager->num_rows > 0 ? $manager->fetch_array() : array();
 			                        	}
 			                        	?>
 			                        </td>
+									<td>
+			                        	<?php 
+			                        	if($row['priority'] == 8){
+									  		echo "<span class='badge badge-dark'>Low</span>";
+			                        	}elseif($row['priority'] == 9){
+									  		echo "<span class='badge badge-info'>Medium</span>";
+			                        	}elseif($row['priority'] == 10){
+									  		echo "<span class='badge badge-danger'>High</span>";
+			                        	}
+			                        	?>
+			                        </td>
+									
 			                        <td class="text-center">
 										<button type="button" class="btn btn-default btn-sm btn-flat border-info wave-effect text-info dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
 					                      Action
@@ -287,6 +300,26 @@ $manager = $manager->num_rows > 0 ? $manager->fetch_array() : array();
 		start_load()
 		$.ajax({
 			url:'ajax.php?action=delete_progress',
+			method:'POST',
+			data:{id:$id},
+			success:function(resp){
+				if(resp==1){
+					alert_toast("Data successfully deleted",'success')
+					setTimeout(function(){
+						location.reload()
+					},1500)
+
+				}
+			}
+		})
+	}
+	$('.delete_task').click(function(){
+	_conf("Are you sure you want to delete this task?","delete_task",[$(this).attr('data-id')])
+	})
+	function delete_task($id){
+		start_load()
+		$.ajax({
+			url:'ajax.php?action=delete_task',
 			method:'POST',
 			data:{id:$id},
 			success:function(resp){

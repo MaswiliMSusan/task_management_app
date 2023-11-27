@@ -22,17 +22,23 @@ if(isset($_GET['id'])){
 			</textarea>
 		</div>
 		<div class="form-group">
-			<label for="">Priority</label>
+			<label for="">Status</label>
 			<select name="status" id="status" class="custom-select custom-select-sm">
 				<option value="1" <?php echo isset($status) && $status == 1 ? 'selected' : '' ?>>Pending</option>
 				<option value="2" <?php echo isset($status) && $status == 2 ? 'selected' : '' ?>>On-Progress</option>
 				<option value="3" <?php echo isset($status) && $status == 3 ? 'selected' : '' ?>>Done</option>
 			</select>
 		</div>
-		
+	    <div class="form-group">
+			<label for="">Priority</label>
+			<select name="priority" id="priority" class="custom-select custom-select-sm">
+				<option value="8" <?php echo isset($priority) && $priority == 8 ? 'selected' : '' ?>>Low</option>
+				<option value="9" <?php echo isset($priority) && $priority == 9 ? 'selected' : '' ?>>Medium</option>
+				<option value="10" <?php echo isset($priority) && $priority == 10 ? 'selected' : '' ?>>High</option>
+			</select>
+		</div>
 	</form>
 </div>
-
 <script>
 	$(document).ready(function(){
 
